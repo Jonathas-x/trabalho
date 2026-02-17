@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Verstappen - Estatísticas da Carreira</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+    color: #f5f5f5;
+}
+
+header {
+    background: linear-gradient(90deg, #0600ff, #d00000);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+nav {
+    background: #000;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card {
+    background: #1e1e1e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 10px auto 0 auto;
+    display: block;
+}
+
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.stat-box {
+    background: #222;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.stat-box h2 {
+    margin: 5px 0;
+    color: #00aaff;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #00aaff;
+}
+
+.input-group input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #222;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #0600ff;
+    box-shadow: 0 0 8px rgba(6, 0, 255, 0.6);
+}
+
+
+button {
+    background: #0600ff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #d00000;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #000;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Max Verstappen - Estatísticas da Carreira</h1>
+    <p>Um blog informativo sobre a trajetória do piloto da Fórmula 1</p>
+</header>
+
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#estatisticas">Estatísticas</a>
+    <a href="#edicao">Editar Dados</a>
+</nav>
+
+<div class="container">
+
+<div class="card" id="sobre">
+    <h2>Sobre Max Verstappen</h2>
+    <p>
+        Max Verstappen é um piloto de Fórmula 1 conhecido por seu estilo agressivo,
+        talento excepcional e múltiplos títulos mundiais pela equipe Red Bull Racing.
+        Desde sua estreia muito jovem na Fórmula 1, tornou-se um dos maiores nomes da história recente da categoria.
+    </p>
+
+    <img src="IMG1.jpg" 
+         alt="Max Verstappen">
+
+</div>
+
+<div class="card" id="estatisticas">
+    <h2>Estatísticas da Carreira</h2>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <h3>Corridas</h3>
+            <h2 id="races">185</h2>
+        </div>
+        <div class="stat-box">
+            <h3>Vitórias</h3>
+            <h2 id="wins">54</h2>
+        </div>
+        <div class="stat-box">
+            <h3>Pódios</h3>
+            <h2 id="podiums">98</h2>
+        </div>
+        <div class="stat-box">
+            <h3>Pole Positions</h3>
+            <h2 id="poles">32</h2>
+        </div>
+        <div class="stat-box">
+            <h3>Títulos Mundiais</h3>
+            <h2 id="titles">3</h2>
+        </div>
+    </div>
+
+    <img src="IMG2.jpg" 
+         alt="Red Bull Racing">
+
+</div>
+
+<div class="card" id="edicao">
+    <h2>Modo de Edição</h2>
+    <p>Você pode atualizar os dados abaixo e salvar as alterações:</p>
+
+    <div class="form-grid">
+        <div class="input-group">
+            <label>Corridas</label>
+            <input type="number" id="editRaces" placeholder="Digite o total">
+        </div>
+
+        <div class="input-group">
+            <label>Vitórias</label>
+            <input type="number" id="editWins" placeholder="Digite o total">
+        </div>
+
+        <div class="input-group">
+            <label>Pódios</label>
+            <input type="number" id="editPodiums" placeholder="Digite o total">
+        </div>
+
+        <div class="input-group">
+            <label>Poles</label>
+            <input type="number" id="editPoles" placeholder="Digite o total">
+        </div>
+
+        <div class="input-group">
+            <label>Títulos</label>
+            <input type="number" id="editTitles" placeholder="Digite o total">
+        </div>
+    </div>
+
+    <button onclick="saveStats()">Salvar Alterações</button>
+</div>
+
+
+</div>
+
+<footer>
+   Ensaio de desenvolvimento de anexo.
+</footer>
+
+<script>
+// Carregar dados salvos
+window.onload = function() {
+    if(localStorage.getItem("verStats")){
+        const stats = JSON.parse(localStorage.getItem("verStats"));
+        updateStats(stats);
+    }
+}
+
+function saveStats(){
+    const stats = {
+        races: document.getElementById("editRaces").value,
+        wins: document.getElementById("editWins").value,
+        podiums: document.getElementById("editPodiums").value,
+        poles: document.getElementById("editPoles").value,
+        titles: document.getElementById("editTitles").value
+    }
+
+    localStorage.setItem("verStats", JSON.stringify(stats));
+    updateStats(stats);
+    alert("Dados atualizados com sucesso!");
+}
+
+function updateStats(stats){
+    if(stats.races) document.getElementById("races").innerText = stats.races;
+    if(stats.wins) document.getElementById("wins").innerText = stats.wins;
+    if(stats.podiums) document.getElementById("podiums").innerText = stats.podiums;
+    if(stats.poles) document.getElementById("poles").innerText = stats.poles;
+    if(stats.titles) document.getElementById("titles").innerText = stats.titles;
+}
+</script>
+
+</body>
+</html>
